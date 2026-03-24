@@ -1,0 +1,19 @@
+appId: com.agileadautomation.medibook
+---
+- launchApp:
+    clearState: true
+- waitForAnimationToEnd
+- tapOn:
+    text: "Get Started"
+    optional: true
+- tapOn:
+    text: "Email"
+- inputText: "test@example.com"
+- tapOn:
+    text: "Password"
+- inputText: "password123"
+- tapOn:
+    text: "Login"
+- assertVisible:
+    text: "Good morning"
+- takeScreenshot: login-success

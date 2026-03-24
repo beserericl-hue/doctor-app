@@ -1,0 +1,37 @@
+{
+  "expo": {
+    "name": "MediBook",
+    "slug": "medibook-doctor-app",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./src/assets/images/icon.png",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "image": "./src/assets/images/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#1A56DB"
+    },
+    "ios": {
+      "supportsTablet": false,
+      "bundleIdentifier": "com.agileadautomation.medibook",
+      "buildNumber": "1",
+      "infoPlist": {
+        "NSCameraUsageDescription": "MediBook needs camera access to take your profile photo.",
+        "NSPhotoLibraryUsageDescription": "MediBook needs access to your photo library.",
+        "NSFaceIDUsageDescription": "MediBook uses Face ID to authenticate your identity."
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./src/assets/images/adaptive-icon.png",
+        "backgroundColor": "#1A56DB"
+      },
+      "package": "com.agileadautomation.medibook",
+      "versionCode": 1
+    },
+    "plugins": ["expo-image-picker", "expo-font"],
+    "extra": {
+      "eas": { "projectId": "REPLACE_WITH_EAS_PROJECT_ID" }
+    }
+  }
+}
