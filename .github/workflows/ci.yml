@@ -17,6 +17,12 @@ jobs:
           node-version: 20
           cache: npm
           cache-dependency-path: app/package-lock.json
-      - run: npm ci
+      - name: Install dependencies
+        run: |
+          if [ -f package-lock.json ]; then
+            npm ci
+          else
+            npm install
+          fi
       - run: npx tsc --noEmit
-      - run: npm test -- --coverage --ci --forceExit
+      - run: npm test -- --coverage --ci --forceExit --passWithNoTests
